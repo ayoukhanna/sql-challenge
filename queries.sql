@@ -31,3 +31,8 @@ FROM employees
 JOIN department_employee on employees.emp_no=department_employee.emp_no
 JOIN departments on departments.dept_no=department_employee.dept_no;
 
+--first name is Hercules and last name begins with B--
+SELECT first_name,last_name,sex 
+FROM employees
+WHERE first_name = 'Hercules' 
+AND last_name LIKE 'B%'
