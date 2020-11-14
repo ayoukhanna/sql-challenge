@@ -36,3 +36,16 @@ SELECT first_name,last_name,sex
 FROM employees
 WHERE first_name = 'Hercules' 
 AND last_name LIKE 'B%'
+
+--list of all employees in Sales department--
+SELECT
+employees.first_name,
+employees.last_name,
+employees.emp_no,
+departments.dept_name
+FROM employees
+JOIN department_employee on employees.emp_no=department_employee.emp_no
+JOIN departments on departments.dept_no=department_employee.dept_no
+WHERE departments.dept_name = 'Sales'
+
+--
