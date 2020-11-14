@@ -58,6 +58,7 @@ FROM employees
 JOIN department_employee on employees.emp_no=department_employee.emp_no
 JOIN departments on departments.dept_no=department_employee.dept_no
 WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development'
+
 --count of how many employees share a last name--
 SELECT last_name, count(last_name)
 FROM employees
