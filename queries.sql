@@ -48,4 +48,13 @@ JOIN department_employee on employees.emp_no=department_employee.emp_no
 JOIN departments on departments.dept_no=department_employee.dept_no
 WHERE departments.dept_name = 'Sales'
 
---
+--list of employees in the Sales and Development departments"
+SELECT
+employees.first_name,
+employees.last_name,
+employees.emp_no,
+departments.dept_name
+FROM employees
+JOIN department_employee on employees.emp_no=department_employee.emp_no
+JOIN departments on departments.dept_no=department_employee.dept_no
+WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development'
